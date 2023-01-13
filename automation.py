@@ -15,6 +15,10 @@ phone_numbers_combined = []
 for x in phone_numbers:
     phone_numbers_combined.append(str(x[1]) + "-" + str(x[2]) + "-" + str(x[3]) + str(x[4]))
 
+#sort lists
+phone_numbers_combined = sorted(phone_numbers_combined)
+emails = sorted(emails)
+
 # remove duplicates by putting into set
 phone_numbers_combined = set(phone_numbers_combined)
 emails = set(emails)
@@ -31,4 +35,3 @@ with open('results/emails.txt', 'w')as f:
 
 print(f"{len(emails)} unique emails found ")
 print(f"{len(phone_numbers_combined)} unique phone numbers found ")
-
